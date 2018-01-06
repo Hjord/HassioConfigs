@@ -90,7 +90,12 @@ zone:
     latitude: !secret home_latitude
     longitude: !secret home_longitude
     radius: 100
-    icon: mdi:account-multiple
+    icon: mdi:castle
+  - name: Claudia Work
+    latitude: !secret cwork_latitude
+    longitude: !secret cwork_longitude
+    radius: 150  
+    icon: mdi:school
  #__  __        _ _        ___ _                      
  #|  \/  |___ __| (_)__ _  | _ \ |__ _ _  _ ___ _ _ ___
  #| |\/| / -_) _` | / _` | |  _/ / _` | || / -_) '_(_-<
