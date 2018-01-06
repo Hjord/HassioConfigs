@@ -1,0 +1,9 @@
+livingroom_view:
+  name: Media Players
+  view: yes
+  entities:
+    - media_player.kodi_stue
+    - media_player.tv_stue
+    - media_player.livingroom_speakers
+    - media_player.kodi_sovevrelse
+    - media_player.chromecast__sovevrelse
