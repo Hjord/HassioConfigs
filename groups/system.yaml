@@ -1,0 +1,58 @@
+#  ___         _             
+# / __|_  _ __| |_ ___ _ __  
+# \__ \ || (_-<  _/ -_) '  \ 
+# |___/\_, /__/\__\___|_|_|_|
+#      |__/   
+
+glances_card:
+  name: Glances
+  entities:
+    - sensor.glances_cpu_load
+    - sensor.glances_cpu_temp
+    - sensor.glances_disk_free
+    - sensor.glances_disk_used
+    - sensor.glances_disk_used_2
+    - sensor.glances_ram_free
+    - sensor.glances_ram_used
+    - sensor.glances_ram_used_2
+    - sensor.glances_running
+    - sensor.glances_sleeping
+    - sensor.glances_swap_free
+    - sensor.glances_swap_used
+    - sensor.glances_swap_used_2
+    - sensor.glances_thread
+    - sensor.glances_total
+
+netdata_card:
+  name: Netdata
+  entities:
+    - sensor.netdata_ram_free
+    - sensor.netdata_ram_used
+    - sensor.netdata_ram_cached
+    - sensor.netdata_ram_buffers
+    - sensor.netdata_swap_free
+    - sensor.netdata_swap_used
+    - sensor.netdata_processes_running
+    - sensor.netdata_processes_blocked
+    - sensor.netdata_system_load
+    - sensor.netdata_system_io_in
+    - sensor.netdata_system_io_out
+    - sensor.netdata_ipv4_in
+    - sensor.netdata_ipv4_out
+    - sensor.netdata_disk_free
+    - sensor.netdata_cpu_iowait
+    - sensor.netdata_cpu_user
+    - sensor.netdata_cpu_system
+    - sensor.netdata_cpu_softirq
+    - sensor.netdata_cpu_guest
+    - sensor.netdata_uptime
+    - sensor.netdata_packets_received
+    - sensor.netdata_packets_sent
+    - sensor.netdata_connections
+
+system_view:
+  name: System
+  view: yes
+  entities:
+    - group.glances_card
+    - group.netdata_card

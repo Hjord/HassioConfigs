@@ -1,5 +1,0 @@
-office_view:
-  name: Kontor
-  view: yes
-  entities:
-    - light.flux_strip

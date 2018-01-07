@@ -22,7 +22,6 @@ homeassistant:
 # | _|| ' \/ _` | '_ \ / -_) _` |
 # |___|_||_\__,_|_.__/_\___\__,_|
 
-introduction: # Show links to resources in log and frontend
 frontend: # Enables the frontend
 config: # Enables configuration UI
 
@@ -48,9 +47,56 @@ logbook: # View all events in a logbook
 map: # Enables a map showing the location of tracked devices
 sun: # Track the sun
 
-# Weather prediction
 sensor:
-  - platform: yr
+  - platform: yr # Weather prediction
+  #- platform: cpuspeed broken in hass.io?
+    name: Pi CPU
+  - platform: netdata
+    host: 192.168.1.3
+    port: 19999
+    resources:
+      - 'memory_free'
+      - 'memory_used'
+      - 'memory_cached'
+      - 'memory_buffers'
+      - 'swap_free'
+      - 'swap_used'
+      - 'processes_running'
+      - 'processes_blocked'
+      - 'system_load'
+      - 'system_io_in'
+      - 'system_io_out'
+      - 'ipv4_in'
+      - 'ipv4_out'
+      - 'disk_free'
+      - 'cpu_iowait'
+      - 'cpu_user'
+      - 'cpu_system'
+      - 'cpu_softirq'
+      - 'cpu_guest'
+      - 'uptime'
+      #- 'packets_received' Netdata does not work with one of these enabled
+      #- 'packets_sent'
+      #- 'connections'
+  - platform: glances
+    host: 192.168.1.3
+    port: 64646
+    resources:
+      - 'disk_use_percent'
+      - 'disk_use'
+      - 'disk_free'
+      - 'memory_use_percent'
+      - 'memory_use'
+      - 'memory_free'
+      - 'swap_use_percent'
+      - 'swap_use'
+      - 'swap_free'
+      - 'processor_load'
+      - 'process_running'
+      - 'process_total'
+      - 'process_thread'
+      - 'process_sleeping'
+      - 'cpu_temp'
 
 # Text to speech
 tts:
@@ -77,6 +123,7 @@ mqtt:
 
 device_tracker:
   - platform: owntracks
+
 
 
 light:
