@@ -1,3 +1,10 @@
+#  ___         _               __  __          _ _           _             ___                          
+# / __|_  _ __| |_ ___ _ __   |  \/  |___ _ _ (_) |_ ___ _ _(_)_ _  __ _  / __| ___ _ _  ___ ___ _ _ ___
+# \__ \ || (_-<  _/ -_) '  \  | |\/| / _ \ ' \| |  _/ _ \ '_| | ' \/ _` | \__ \/ -_) ' \(_-</ _ \ '_(_-<
+# |___/\_, /__/\__\___|_|_|_| |_|  |_\___/_||_|_|\__\___/_| |_|_||_\__, | |___/\___|_||_/__/\___/_| /__/
+#      |__/                                                        |___/                                
+
+
 #- platform: cpuspeed broken in hass.io?
 - platform: systemmonitor
   resources:
@@ -60,3 +67,50 @@
     - 'process_thread'
     - 'process_sleeping'
     - 'cpu_temp'
+
+#Server uptime
+- platform: rest
+  resource: http://192.168.1.3:64646/api/2/uptime
+  name: Server uptime
+  value_template: '{{ value }}'
+  scan_intercal: 7200
+
+
+# #OTHER DISKS FROM GLANCES API - is this the best way? Custom component??
+#T1
+- platform: rest
+  resource: http://192.168.1.3:64646/api/2/fs
+  name: Disk T1
+  value_template: 'Used: {{ value_json[3].percent }} % Free: {{ value_json[3].free| multiply(0.000000001)| round(1) }} GB'
+  scan_interval: 7200
+#T2
+- platform: rest
+  resource: http://192.168.1.3:64646/api/2/fs
+  name: Disk T2
+  value_template: 'Used: {{ value_json[4].percent }} % Free: {{ value_json[4].free| multiply(0.000000001)| round(1) }} GB'
+  scan_interval: 7200
+#T3
+- platform: rest
+  resource: http://192.168.1.3:64646/api/2/fs
+  name: Disk T3
+  value_template: 'Used: {{ value_json[1].percent }} % Free: {{ value_json[1].free| multiply(0.000000001)| round(1) }} GB'
+  scan_interval: 7200
+#M1
+- platform: rest
+  resource: http://192.168.1.3:64646/api/2/fs
+  name: Disk M1
+  value_template: 'Used: {{ value_json[2].percent }} % Free: {{ value_json[2].free| multiply(0.000000001)| round(1) }} GB'
+  scan_interval: 7200
+#M2
+- platform: rest
+  resource: http://192.168.1.3:64646/api/2/fs
+  name: Disk M2
+  value_template: 'Used: {{ value_json[5].percent }} % Free: {{ value_json[5].free| multiply(0.000000001)| round(1) }} GB'
+  scan_interval: 7200
+#DATA
+- platform: rest
+  resource: http://192.168.1.3:64646/api/2/fs
+  name: Disk data
+  value_template: 'Used: {{ value_json[6].percent }} % Free: {{ value_json[6].free| multiply(0.000000001)| round(1) }} GB'
+  scan_interval: 7200
+     

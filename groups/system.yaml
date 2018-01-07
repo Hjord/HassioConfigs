@@ -13,16 +13,14 @@ system_view:
     - group.glances_card
     - group.netdata_card
     - group.this_system_card
+    - group.disks_card
 
 
 glances_card:
   name: Glances
   entities:
     - sensor.glances_cpu_load
-    - sensor.glances_cpu_temp
-    - sensor.glances_disk_free
-    - sensor.glances_disk_used
-    - sensor.glances_disk_used_2
+    - sensor.glances_cpu_temp   
     - sensor.glances_ram_free
     - sensor.glances_ram_used
     - sensor.glances_ram_used_2
@@ -33,7 +31,9 @@ glances_card:
     - sensor.glances_swap_used_2
     - sensor.glances_thread
     - sensor.glances_total
+    - sensor.server_uptime
 
+    
 netdata_card:
   name: Netdata
   entities:
@@ -60,6 +60,19 @@ netdata_card:
     - sensor.netdata_packets_received
     - sensor.netdata_packets_sent
     - sensor.netdata_connections
+
+disks_card:
+  name: Disks
+  entities:
+    - sensor.glances_disk_free
+    - sensor.glances_disk_used
+    - sensor.glances_disk_used_2
+    - sensor.disk_data
+    - sensor.disk_t1
+    - sensor.disk_t2
+    - sensor.disk_t3
+    - sensor.disk_m1
+    - sensor.disk_m2
 
 this_system_card:
   name: System monitor
