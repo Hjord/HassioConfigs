@@ -4,6 +4,17 @@
 # |___/\_, /__/\__\___|_|_|_|
 #      |__/   
 
+
+
+system_view:
+  name: System
+  view: yes
+  entities:
+    - group.glances_card
+    - group.netdata_card
+    - group.this_system_card
+
+
 glances_card:
   name: Glances
   entities:
@@ -50,9 +61,16 @@ netdata_card:
     - sensor.netdata_packets_sent
     - sensor.netdata_connections
 
-system_view:
-  name: System
-  view: yes
+this_system_card:
+  name: System monitor
   entities:
-    - group.glances_card
-    - group.netdata_card
+    - sensor.disk_free_
+    - sensor.disk_used_
+    - sensor.disk_used__2
+    - sensor.last_boot
+    - sensor.ram_available
+    - sensor.ram_used
+    - sensor.ram_used_2
+    - sensor.since_last_boot
+
+
