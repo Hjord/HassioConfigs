@@ -9,11 +9,12 @@
 system_view:
   name: System
   view: yes
-  entities:
-    - group.glances_card
-    - group.netdata_card
+  entities:   
     - group.this_system_card
     - group.disks_card
+    - group.dl_card
+    - group.glances_card
+    - group.netdata_card
 
 
 glances_card:
