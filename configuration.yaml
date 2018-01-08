@@ -73,7 +73,10 @@ mqtt:
 device_tracker:
   - platform: owntracks
 
-
+notify:
+  - name: Push
+    platform: pushbullet
+    api_key: !secret pushbullet_api
 
 light:
 # Example configuration.yaml entry

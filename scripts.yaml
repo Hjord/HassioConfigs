@@ -1,0 +1,7 @@
+test_pushbullet:
+  alias: 'pushtest'
+  sequence: 
+    - service: notify.push
+      data:
+        message: Test message
+        target: !secret pushbullet_hjord
