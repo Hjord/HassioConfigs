@@ -1,0 +1,16 @@
+notify_hjord:
+  alias: Notify Hjord
+  sequence:
+    - service: notify.pushbullet
+      data_template:
+        message: "{{ message }}"
+        target: !secret pushbullet_hjord
+
+notify_chriss:
+  alias: Notify Chriss
+  sequence:
+    - service: notify.pushbullet
+      data_template:
+        message: "{{ message }}" 
+        target: !secret pushbullet_chriss       
+

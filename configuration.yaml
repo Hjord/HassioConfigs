@@ -57,8 +57,8 @@ tts:
 # |___||_|\_| \___||____|\___/ |___/ |___||___/
 
 group: !include_dir_merge_named groups/
-automation: !include automations.yaml
-script: !include scripts.yaml
+script: !include_dir_merge_named scripts/
+automation: !include_dir_merge_list automations/
 sensor: !include_dir_merge_list sensors/
 
 #  _____ _                   _         __  __    
@@ -75,7 +75,7 @@ device_tracker:
   - platform: owntracks
 
 notify:
-  - name: Push
+  - name: Pushbullet
     platform: pushbullet
     api_key: !secret pushbullet_api
 
