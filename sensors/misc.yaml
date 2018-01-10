@@ -6,6 +6,11 @@
 
 - platform: yr # Weather prediction
 
+- platform: lastfm
+  api_key: !secret lastfm_api
+  users:
+    - !secret lastfm_user
+
 
 
 # PHONE BATTERIES
