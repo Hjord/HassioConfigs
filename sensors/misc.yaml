@@ -11,6 +11,9 @@
   users:
     - !secret lastfm_user
 
+- platform: command_line
+  name: Bad Login Counter
+  command: grep -c 'Login attempt' /config/home-assistant.log
 
 
 # PHONE BATTERIES

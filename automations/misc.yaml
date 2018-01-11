@@ -1,0 +1,8 @@
+- alias: "Send notification upon failed login attempt"
+  trigger:
+    - platform: template
+      value_template: "{{ states('persistent_notification.httplogin') != 'unknown' }}"
+  action:
+    service: script.notify_hjord
+    data:
+      message: "Bad login"
