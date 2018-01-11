@@ -13,8 +13,7 @@
 
 - platform: command_line
   name: Bad Login Counter
-  command: grep -c 'Login attempt' /config/home-assistant.log
-
+  command: cat /config/home-assistant.log | grep -v 'grep' | grep -c 'Login attempt'
 
 # DOMAINS, EMAILS ETC.
 - platform: whois
