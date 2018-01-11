@@ -1,0 +1,21 @@
+#  _  _                __   ___            
+# | || |___ _ __  ___  \ \ / (_)_____ __ __
+# | __ / _ \ '  \/ -_)  \ V /| / -_) V  V /
+# |_||_\___/_|_|_\___|   \_/ |_\___|\_/\_/ 
+
+
+# default_view:
+#   view: yes
+#   entities:   
+#     - group.family_card
+
+
+
+family_card:
+  name: Family
+  entities:
+    - device_tracker.chriss_nexus
+    - sensor.chriss_battery
+    - device_tracker.hjord_moto
+    - sensor.hjord_battery
+                                          
