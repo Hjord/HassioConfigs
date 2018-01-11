@@ -16,8 +16,34 @@
   command: grep -c 'Login attempt' /config/home-assistant.log
 
 
-# PHONE BATTERIES
+# DOMAINS, EMAILS ETC.
+- platform: whois
+  domain: !secret domain_hjord
+  name: !secret domain_hjord
 
+- platform: whois
+  domain: !secret domain_owm
+  name: OWM
+
+- platform: whois
+  domain: !secret domain_l
+  name: Loutor
+
+- platform: whois
+  domain: !secret domain_w
+  name: Wio
+
+- platform: haveibeenpwned
+  email:
+    - !secret email1
+    - !secret email2
+    - !secret email3  
+
+- platform: cert_expiry
+  host: !secret domain_d
+  port: !secret domain_d_port
+
+# PHONE BATTERIES
 - platform: mqtt
   state_topic: "owntracks/Hjord/Moto"
   name: "Hjord battery"

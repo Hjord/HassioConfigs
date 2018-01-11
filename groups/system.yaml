@@ -17,6 +17,18 @@ system_view:
     - group.netdata_card
 
 
+
+domain_card:
+  name: Domains
+  entities:
+    - sensor.hjordnet
+    - sensor.owm
+    - sensor.loutor
+    - sensor.wio
+    - sensor.ssl_certificate_expiry
+
+
+
 glances_card:
   name: Glances
   entities:
