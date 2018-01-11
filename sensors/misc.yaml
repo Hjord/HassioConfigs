@@ -48,7 +48,7 @@
   name: "Hjord battery"
   unit_of_measurement: "%"
   value_template: > 
-    {% if value_json.batt %}
+    {% if value_json.batt is defined %}
       {{ value_json.batt }}
     {% else %}
       {{ states('sensor.hjord_battery') }}
@@ -59,7 +59,7 @@
   name: "Chriss battery"
   unit_of_measurement: "%"
   value_template: >
-    {% if value_json.batt %}
+    {% if value_json.batt is defined %}
       {{ value_json.batt }}
     {% else %}
       {{ states('sensor.chriss_battery') }}
