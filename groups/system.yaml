@@ -11,12 +11,22 @@ system_view:
   view: yes
   entities:   
     - group.this_system_card
+    - group.speedtest_card
     - group.disks_card
     - group.dl_card
+    - group.haveibeenpwned_card
+    - group.domain_card
     - group.glances_card
     - group.netdata_card
+    - sensor.bad_login_counter
 
 
+speedtest_card:
+  name: Speedtest
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
 
 domain_card:
   name: Domains
