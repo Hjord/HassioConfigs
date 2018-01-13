@@ -1,8 +1,9 @@
 - id: hjord_low_battery
   alias: Hjord's batteri under 15%
   trigger:
-    platform: template
-    value_template: "{{ states.sensor.hjord_battery | int < 15 }}"
+    platform: numeric_state
+    entity_id: sensor.hjord_battery
+    below: 15
   action:
     service: script.notify_chriss
     data:
@@ -11,9 +12,21 @@
 - id: chriss_low_battery
   alias: Chriss' batteri under 15%
   trigger:
-    platform: template
-    value_template: "{{ states.sensor.chriss_battery | int < 15 }}"
+    platform: numeric_state
+    entity_id: sensor.chriss_battery
+    below: 15
   action:
     service: script.notify_hjord
     data:
-      message: 'Chriss er ved at løbe tør for strøm'      
+      message: 'Chriss er ved at løbe tør for strøm'
+
+
+# - id: chriss_low_battery
+#   alias: Chriss' batteri under 15%
+#   trigger:
+#     platform: template
+#     value_template: "{{ states.sensor.chriss_battery | int < 15 }}"
+#   action:
+#     service: script.notify_hjord
+#     data:
+#       message: 'Chriss er ved at løbe tør for strøm'                

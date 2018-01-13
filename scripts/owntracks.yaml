@@ -1,0 +1,11 @@
+owntracks_report:
+  alias: Request Owntracks Location
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: owntracks/Hjord/Moto/cmd 
+        payload: '{"_type":"cmd", "action":"reportLocation"}'
+    - service: mqtt.publish
+      data:
+        topic: owntracks/Chris/Nexus/cmd
+        payload: '{"_type":"cmd", "action":"reportLocation"}'    

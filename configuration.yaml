@@ -91,7 +91,7 @@ zone:
     longitude: !secret home_longitude
     radius: 100
     icon: mdi:castle
-  - name: Claudia Work
+  - name: Work
     latitude: !secret cwork_latitude
     longitude: !secret cwork_longitude
     radius: 150  
