@@ -1,3 +1,4 @@
+#LOW BATTERY
 - id: hjord_low_battery
   alias: Hjord's batteri under 15%
   trigger:
@@ -21,12 +22,13 @@
       message: 'Chriss er ved at løbe tør for strøm'
 
 
-# - id: chriss_low_battery
-#   alias: Chriss' batteri under 15%
-#   trigger:
-#     platform: template
-#     value_template: "{{ states.sensor.chriss_battery | int < 15 }}"
-#   action:
-#     service: script.notify_hjord
-#     data:
-#       message: 'Chriss er ved at løbe tør for strøm'                
+#NEW HASS VERSION
+- id: update_notification
+  alias: Update Notification
+  trigger:
+    - platform: state
+      entity_id: updater.updater
+  action:
+    service: script.notify_hjord
+    data:
+      message: 'Home Assistant v. {{ states.updater.updater.state }} er ude nu!'
