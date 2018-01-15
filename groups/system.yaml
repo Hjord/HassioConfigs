@@ -10,6 +10,7 @@ system_view:
   name: System
   view: yes
   entities:   
+    - group.main_system_card
     - group.this_system_card
     - group.speedtest_card
     - group.disks_card
@@ -20,6 +21,11 @@ system_view:
     - group.netdata_card
     - sensor.bad_login_counter
 
+
+main_system_card:
+  name: Status
+  entities:
+    - sensor.myipopendnscom
 
 speedtest_card:
   name: Speedtest

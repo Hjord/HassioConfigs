@@ -66,6 +66,11 @@ sensor: !include_dir_merge_list sensors/
 #   | | | ' \/ -_) '  \  (_-<  _| || |  _|  _(_-<
 #   |_| |_||_\___|_|_|_| /__/\__|\_,_|_| |_| /__/
 
+
+duckdns:
+  domain: !secret duck_sub
+  access_token: !secret duck_access
+
 mqtt:
   broker: core-mosquitto
   username: !secret mqtt_username
