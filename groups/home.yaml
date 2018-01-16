@@ -18,4 +18,11 @@ family_card:
     - sensor.chriss_battery
     - device_tracker.hjord_moto
     - sensor.hjord_battery
+
+travel_card:
+  name: Travel
+  entities:
+    - sensor.chriss_to_home
+    - sensor.hjord_to_home
+    - sensor.hjord_to_chriss    
                                           
