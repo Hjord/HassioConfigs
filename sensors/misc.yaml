@@ -57,7 +57,30 @@
     - 12
     - 18  
 
+# GOOGLE MAPS
+- platform: google_travel_time
+  name: Chriss to home
+  api_key: !secret gmap_api
+  origin: device_tracker.chriss_nexus
+  destination: zone.home
+  options:
+    mode: walking
 
+- platform: google_travel_time
+  name: Hjord to home
+  api_key: !secret gmap_api
+  origin: device_tracker.hjord_moto
+  destination: zone.home
+  options:
+    mode: walking    
+
+- platform: google_travel_time
+  name: Hjord to Chriss
+  api_key: !secret gmap_api
+  origin: device_tracker.chriss_nexus
+  destination: device_tracker.hjord_moto
+  options:
+    mode: walking
 
 # PHONE BATTERIES
 - platform: mqtt
