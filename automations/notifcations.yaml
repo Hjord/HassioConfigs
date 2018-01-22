@@ -32,3 +32,13 @@
     service: script.notify_hjord
     data:
       message: 'Home Assistant v. {{ states.updater.updater.state }} er ude nu!'
+
+- id: hassio_online_notification
+  alias: Hassio is back online
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    service: script.notify_hjord
+    data:
+      message: "I'm back up again!"
