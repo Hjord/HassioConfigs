@@ -1,0 +1,27 @@
+# org_network_card:
+#   name: Orginal Network
+#   entities:
+#     - device_tracker.extender
+#     - device_tracker.tv
+#     - device_tracker.server
+#     - device_tracker.chromecastaudio
+#     - device_tracker.ps4
+#     - device_tracker.hjordflip
+#     - device_tracker.router
+#     - device_tracker.zbox
+#     - device_tracker.chromecast
+#     - device_tracker.chrissflip
+
+network_card:
+  name: Network Card
+  entities:
+    - sensor.extender_status
+    - sensor.tv_status
+    - sensor.server_status
+    - sensor.ca_audio_status
+    - sensor.router_status
+    - sensor.ps4_status
+    - sensor.hjordflip_status  
+    - sensor.zbox_status
+    - sensor.chromecast_status
+    - sensor.chrissflip_status  

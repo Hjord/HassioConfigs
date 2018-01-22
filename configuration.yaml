@@ -78,11 +78,25 @@ mqtt:
 
 device_tracker:
   - platform: owntracks
+  - platform: nmap_tracker
+    hosts: 192.168.1.0/24
+    track_new_devices: yes
 
 notify:
-  - name: Pushbullet
-    platform: pushbullet
+  - platform: pushbullet
+    name: Pushbullet
     api_key: !secret pushbullet_api
+  - platform: nfandroidtv
+    name: AndroidTV
+    host: 192.168.1.7
+  - platform: kodi
+    name: Kodi
+    host: 192.168.1.5
+  - platform: group
+    name: tvs
+    services:
+      - service: androidtv
+      - service: kodi  
 
 light:
 # Example configuration.yaml entry

@@ -1,0 +1,33 @@
+-  platform: template
+   sensors:
+      extender_status:
+        friendly_name: "Extender"
+        value_template: "{% if is_state('device_tracker.extender', 'home') %}Online{% else %}Offline{% endif %}"
+      tv_status:
+        friendly_name: "TV"
+        value_template: "{% if is_state('device_tracker.tv', 'home') %}Online{% else %}Offline{% endif %}"
+      server_status:
+        friendly_name: "Server"
+        value_template: "{% if is_state('device_tracker.server', 'home') %}Online{% else %}Offline{% endif %}"
+      ca_audio_status:
+        friendly_name: "Cast Audio"
+        value_template: "{% if is_state('device_tracker.chromecastaudio', 'home') %}Online{% else %}Offline{% endif %}"
+      router_status:
+        friendly_name: "Router"
+        value_template: "{% if is_state('device_tracker.router', 'home') %}Online{% else %}Offline{% endif %}"
+      ps4_status:
+        friendly_name: "PS4"
+        value_template: "{% if is_state('device_tracker.ps4', 'home') %}Online{% else %}Offline{% endif %}"
+      hjordflip_status:
+        friendly_name: "HjordFlip"
+        value_template: "{% if is_state('device_tracker.hjordflip', 'home') %}Online{% else %}Offline{% endif %}"
+      chrissflip_status:
+        friendly_name: "ChrissFlip"
+        value_template: "{% if is_state('device_tracker.chrissflip', 'home') %}Online{% else %}Offline{% endif %}"
+      chromecast_status:
+        friendly_name: "Cast"
+        value_template: "{% if is_state('device_tracker.chromecast', 'home') %}Online{% else %}Offline{% endif %}"
+      zbox_status:
+        friendly_name: "zBox"
+        value_template: "{% if is_state('device_tracker.zbox', 'home') %}Online{% else %}Offline{% endif %}"     
+
