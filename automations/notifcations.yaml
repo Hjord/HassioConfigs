@@ -51,5 +51,8 @@
   action:
     - service: script.notify_hjord
       data_template:
-        message: 'New device detected on network'
+        message: >
+          New device on network:
+          
+          ({{trigger.event.data.entity_id}})
        

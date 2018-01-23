@@ -26,10 +26,12 @@ sensor.chromecast_status:
   icon: mdi:cast
 sensor.chrissflip_status:
   icon: mdi:laptop
+sensor.nexus7_status:
+  icon:  mdi:tablet-android
 
-# group.org_network_card:
-#   hidden: true
 
+
+# Hide devices. Don't need home/away status for stationary devices
 device_tracker.extender:
   hidden: true
 device_tracker.tv:
@@ -50,3 +52,5 @@ device_tracker.chromecast:
   hidden: true
 device_tracker.chrissflip:
   hidden: true
+device_tracker.nexus7:
+  hidden: true  

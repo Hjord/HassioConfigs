@@ -29,5 +29,8 @@
         value_template: "{% if is_state('device_tracker.chromecast', 'home') %}Online{% else %}Offline{% endif %}"
       zbox_status:
         friendly_name: "zBox"
-        value_template: "{% if is_state('device_tracker.zbox', 'home') %}Online{% else %}Offline{% endif %}"     
+        value_template: "{% if is_state('device_tracker.zbox', 'home') %}Online{% else %}Offline{% endif %}"
+      nexus7_status:
+        friendly_name: "Nexus 7"
+        value_template: "{% if is_state('device_tracker.nexus7', 'home') %}Online{% else %}Offline{% endif %}"    
 
