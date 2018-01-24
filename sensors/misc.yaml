@@ -13,6 +13,9 @@
 
 - platform: dnsip
 
+- platform: discogs
+  token: !secret discogs_token
+
 - platform: command_line
   name: Bad Login Counter
   command: cat /config/home-assistant.log | grep -v 'grep' | grep -c 'Login attempt'
