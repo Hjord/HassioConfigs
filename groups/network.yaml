@@ -11,4 +11,4 @@ network_card:
     - sensor.zbox_status
     - sensor.chromecast_status
     - sensor.chrissflip_status
-    - sensor.nexus7_status
+    - sensor.nexus7

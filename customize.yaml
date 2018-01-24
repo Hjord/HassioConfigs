@@ -6,6 +6,18 @@
 media_player.tv_stue:
   friendly_name: Cast TV
 
+
+#Nexus 7 hide stuff, only showing combined
+
+sensor.nexus_7_state:
+  hidden: true
+sensor.nexus_7_battery:
+  hidden: true
+sensor.nexus7_status:
+  hidden: true
+sensor.nexus7:
+  icon: mdi:tablet-android
+
 sensor.extender_status:
   icon: mdi:access-point
 sensor.tv_status:
@@ -26,8 +38,6 @@ sensor.chromecast_status:
   icon: mdi:cast
 sensor.chrissflip_status:
   icon: mdi:laptop
-sensor.nexus7_status:
-  icon:  mdi:tablet-android
 
 
 

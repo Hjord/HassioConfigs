@@ -21,6 +21,16 @@
     data:
       message: 'Chriss er ved at løbe tør for strøm'
 
+- id: nexus_low_battery
+  alias: Nexus 7 lav batteri
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.nexus_7_battery
+    below: 14
+  action:
+    service: script.notify_hjord
+    data:
+      message: "Så er det på tide at lade Nexus 7'eren..."
 
 #NEW HASS VERSION
 - id: update_notification
