@@ -133,4 +133,9 @@ media_player:
   - platform: cast #Old
     host: 192.168.1.9
   - platform: cast #TV
-    host: 192.168.1.7      
+    host: 192.168.1.7
+  - platform: ps4
+    host: http://192.168.1.6:3031
+    ps4_ip: 192.168.1.4
+    name: PlayStation 4
+    local_store: games
