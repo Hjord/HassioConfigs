@@ -16,3 +16,4 @@ secrets.yaml
 deps
 tts
 *hide*
+__pycache__
